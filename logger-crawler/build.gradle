@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+    	'org.slf4j:slf4j-api:1.7.5',
+    	'com.jcraft:jsch:0.1.51'
+    )
+    testCompile (
+    	"junit:junit:4.11"
+    )
+    
+}
+
+task "src" << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
