@@ -13,7 +13,7 @@ dependencies {
     testCompile (
     	"junit:junit:4.11"
     )
-    
+    compile fileTree(dir: 'libs', include: '*.jar')
 }
 
 task "src" << {

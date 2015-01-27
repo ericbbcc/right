@@ -3,3 +3,5 @@ gradlew.bat
 right.iws
 gradle
 *.class
+.gradle
+*.bin
